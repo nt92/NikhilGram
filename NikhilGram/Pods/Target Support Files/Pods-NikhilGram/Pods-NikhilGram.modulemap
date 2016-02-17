@@ -1,0 +1,6 @@
+framework module Pods_NikhilGram {
+  umbrella header "Pods-NikhilGram-umbrella.h"
+
+  export *
+  module * { export * }
+}

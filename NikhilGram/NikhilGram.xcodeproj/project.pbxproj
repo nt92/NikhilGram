@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A15651591C73F744008317ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15651581C73F744008317ED /* AppDelegate.swift */; };
+		A156515B1C73F744008317ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156515A1C73F744008317ED /* ViewController.swift */; };
+		A156515E1C73F744008317ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A156515C1C73F744008317ED /* Main.storyboard */; };
+		A15651601C73F744008317ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A156515F1C73F744008317ED /* Assets.xcassets */; };
+		A15651631C73F744008317ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15651611C73F744008317ED /* LaunchScreen.storyboard */; };
+		B90BA6C31EF4CF1AE227A7AE /* Pods_NikhilGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E59253F717C5E2990DEFE /* Pods_NikhilGram.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		808E59253F717C5E2990DEFE /* Pods_NikhilGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NikhilGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90EE08C85205EF69AA1A96BB /* Pods-NikhilGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikhilGram.release.xcconfig"; path = "Pods/Target Support Files/Pods-NikhilGram/Pods-NikhilGram.release.xcconfig"; sourceTree = "<group>"; };
+		A15651551C73F744008317ED /* NikhilGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikhilGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15651581C73F744008317ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A156515A1C73F744008317ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A156515D1C73F744008317ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A156515F1C73F744008317ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A15651621C73F744008317ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A15651641C73F744008317ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F4FB978B3ADEFC61636BA5 /* Pods-NikhilGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikhilGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NikhilGram/Pods-NikhilGram.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A15651521C73F744008317ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90BA6C31EF4CF1AE227A7AE /* Pods_NikhilGram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CCD4282B541ED1F7781E6E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8F4FB978B3ADEFC61636BA5 /* Pods-NikhilGram.debug.xcconfig */,
+				90EE08C85205EF69AA1A96BB /* Pods-NikhilGram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A156514C1C73F744008317ED = {
+			isa = PBXGroup;
+			children = (
+				A15651571C73F744008317ED /* NikhilGram */,
+				A15651561C73F744008317ED /* Products */,
+				8CCD4282B541ED1F7781E6E5 /* Pods */,
+				FBA702A37A0263E70240A8C9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A15651561C73F744008317ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A15651551C73F744008317ED /* NikhilGram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A15651571C73F744008317ED /* NikhilGram */ = {
+			isa = PBXGroup;
+			children = (
+				A15651581C73F744008317ED /* AppDelegate.swift */,
+				A156515A1C73F744008317ED /* ViewController.swift */,
+				A156515C1C73F744008317ED /* Main.storyboard */,
+				A156515F1C73F744008317ED /* Assets.xcassets */,
+				A15651611C73F744008317ED /* LaunchScreen.storyboard */,
+				A15651641C73F744008317ED /* Info.plist */,
+			);
+			path = NikhilGram;
+			sourceTree = "<group>";
+		};
+		FBA702A37A0263E70240A8C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				808E59253F717C5E2990DEFE /* Pods_NikhilGram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A15651541C73F744008317ED /* NikhilGram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A15651671C73F744008317ED /* Build configuration list for PBXNativeTarget "NikhilGram" */;
+			buildPhases = (
+				C4D1C6ADBB8C8E0FD54A25CF /* Check Pods Manifest.lock */,
+				A15651511C73F744008317ED /* Sources */,
+				A15651521C73F744008317ED /* Frameworks */,
+				A15651531C73F744008317ED /* Resources */,
+				CBC4714DAB8A75098BF005D4 /* Embed Pods Frameworks */,
+				23FA9B0F8B580484E83FE74B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NikhilGram;
+			productName = NikhilGram;
+			productReference = A15651551C73F744008317ED /* NikhilGram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A156514D1C73F744008317ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nikhil Thota";
+				TargetAttributes = {
+					A15651541C73F744008317ED = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9T72R294QS;
+					};
+				};
+			};
+			buildConfigurationList = A15651501C73F744008317ED /* Build configuration list for PBXProject "NikhilGram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A156514C1C73F744008317ED;
+			productRefGroup = A15651561C73F744008317ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A15651541C73F744008317ED /* NikhilGram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A15651531C73F744008317ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15651631C73F744008317ED /* LaunchScreen.storyboard in Resources */,
+				A15651601C73F744008317ED /* Assets.xcassets in Resources */,
+				A156515E1C73F744008317ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23FA9B0F8B580484E83FE74B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NikhilGram/Pods-NikhilGram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4D1C6ADBB8C8E0FD54A25CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC4714DAB8A75098BF005D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NikhilGram/Pods-NikhilGram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A15651511C73F744008317ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A156515B1C73F744008317ED /* ViewController.swift in Sources */,
+				A15651591C73F744008317ED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A156515C1C73F744008317ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A156515D1C73F744008317ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A15651611C73F744008317ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A15651621C73F744008317ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A15651651C73F744008317ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A15651661C73F744008317ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A15651681C73F744008317ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8F4FB978B3ADEFC61636BA5 /* Pods-NikhilGram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NikhilGram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NikhilThota.NikhilGram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A15651691C73F744008317ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90EE08C85205EF69AA1A96BB /* Pods-NikhilGram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NikhilGram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NikhilThota.NikhilGram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A15651501C73F744008317ED /* Build configuration list for PBXProject "NikhilGram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15651651C73F744008317ED /* Debug */,
+				A15651661C73F744008317ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A15651671C73F744008317ED /* Build configuration list for PBXNativeTarget "NikhilGram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15651681C73F744008317ED /* Debug */,
+				A15651691C73F744008317ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A156514D1C73F744008317ED /* Project object */;
+}
