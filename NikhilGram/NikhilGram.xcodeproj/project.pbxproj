@@ -12,6 +12,7 @@
 		A156515E1C73F744008317ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A156515C1C73F744008317ED /* Main.storyboard */; };
 		A15651601C73F744008317ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A156515F1C73F744008317ED /* Assets.xcassets */; };
 		A15651631C73F744008317ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15651611C73F744008317ED /* LaunchScreen.storyboard */; };
+		A156516B1C7402E5008317ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156516A1C7402E5008317ED /* LoginViewController.swift */; };
 		B90BA6C31EF4CF1AE227A7AE /* Pods_NikhilGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E59253F717C5E2990DEFE /* Pods_NikhilGram.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		A156515F1C73F744008317ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A15651621C73F744008317ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A15651641C73F744008317ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A156516A1C7402E5008317ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F8F4FB978B3ADEFC61636BA5 /* Pods-NikhilGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikhilGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NikhilGram/Pods-NikhilGram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				A15651581C73F744008317ED /* AppDelegate.swift */,
 				A156515A1C73F744008317ED /* ViewController.swift */,
 				A156515C1C73F744008317ED /* Main.storyboard */,
+				A156516A1C7402E5008317ED /* LoginViewController.swift */,
 				A156515F1C73F744008317ED /* Assets.xcassets */,
 				A15651611C73F744008317ED /* LaunchScreen.storyboard */,
 				A15651641C73F744008317ED /* Info.plist */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A156516B1C7402E5008317ED /* LoginViewController.swift in Sources */,
 				A156515B1C73F744008317ED /* ViewController.swift in Sources */,
 				A15651591C73F744008317ED /* AppDelegate.swift in Sources */,
 			);
