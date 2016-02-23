@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-NikhilGram/Bolts.framework"
   install_framework "Pods-NikhilGram/Parse.framework"
+  install_framework "Pods-NikhilGram/ParseUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-NikhilGram/Bolts.framework"
   install_framework "Pods-NikhilGram/Parse.framework"
+  install_framework "Pods-NikhilGram/ParseUI.framework"
 fi

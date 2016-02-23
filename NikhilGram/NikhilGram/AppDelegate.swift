@@ -21,19 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(
         application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-            
-            // Initialize Parse hosted by Facebook
-            // Parse.setApplicationId("hkzmKm9zeeJd6DJO9jhHytqEIgIA8fhxGV9tuWmH",
-            //            clientKey: "9FuoFpw2JSSBp7BAOQFoqqyPc9zAh5G1Z2sRmrKc")
-            
-            // Initialize Open Source Parse on Heroku
+
             Parse.initializeWithConfiguration(
                 ParseClientConfiguration(block:
                     { (configuration:ParseMutableClientConfiguration) -> Void in
                         
-                        configuration.applicationId = "myAppId"
-                        configuration.clientKey = "myMasterKey"
-                        configuration.server = "https://parse-instagram.herokuapp.com/parse"
+                        configuration.applicationId = "INSTAGRAM_NIKHIL"
+                        configuration.clientKey = "codepath"
+                        configuration.server = "https://instagram-nikhil.herokuapp.com/parse"
                 }))
             
             // Set up listener for user logout

@@ -124,17 +124,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="366"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtD-EU-zhh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="III-RZ-Dqa">
                                                     <rect key="frame" x="8" y="306" width="304" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtD-EU-zhh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pfPostImage" destination="TtD-EU-zhh" id="9dp-dL-YgS"/>
+                                            <outlet property="postDescription" destination="III-RZ-Dqa" id="IxX-DI-8xw"/>
+                                            <outlet property="postImage" destination="TtD-EU-zhh" id="kSV-R4-tco"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -143,8 +148,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Timeline" id="RB8-DA-ZtX"/>
                     <connections>
-                        <outlet property="postDescription" destination="III-RZ-Dqa" id="jC9-z3-bB8"/>
-                        <outlet property="postImage" destination="TtD-EU-zhh" id="Qw7-gO-vk8"/>
                         <outlet property="tableView" destination="Thx-Sv-EEg" id="5M1-ie-h3s"/>
                     </connections>
                 </viewController>

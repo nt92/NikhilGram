@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C32EEAD0C15EC6307A719670'
+               BlueprintIdentifier = '03E43E9DC8DF4EC0B2F15BB4'
                BlueprintName = 'Pods-NikhilGram'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_NikhilGram.framework'>

@@ -7,13 +7,35 @@
 //
 
 import UIKit
+import Parse
 
-class TimelineViewController: UIViewController {
-
+class TimelineViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var posts: [PFObject]!
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        if self.posts == nil{
+            return 0
+        }
+        else{
+            return  self.posts.count
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCellWithIdentifier("TimelineCell") as! TimelineCell
+        cell.Post = posts[indexPath.row]
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tableView.dataSource = self
+        self.tableView.estimatedRowHeight = 350
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,9 +7,25 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class TimelineCell: UITableViewCell {
 
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postDescription: UILabel!
+ 
+    @IBOutlet weak var pfPostImage: PFImageView!
+    
+    var Post: PFObject! {
+        didSet {
+            self.postDescription.text = Post["caption"] as? String
+            let photo = Post["photo"] as! PFObject
+            //self.postImage.file = photo["image"] as? PFFile
+            //self.postImage.loadInBackground()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
