@@ -17,32 +17,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     var previewImage: UIImage!
     
     @IBAction func onSubmit(sender: AnyObject) {
-        let isCameraAvailable = UIImagePickerController.isSourceTypeAvailable(.Camera)
-        
-        // Limit to PhotoLibrary if no camera available
-        let sourceType = isCameraAvailable ? UIImagePickerControllerSourceType.Camera : UIImagePickerControllerSourceType.PhotoLibrary
-        
-        let vc = UIImagePickerController()
-        vc.delegate = self
-        vc.sourceType = sourceType
-        
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.captureImage.image = nil
-        self.captureDescription.text = ""
-        self.captureImage.backgroundColor = UIColor(white: 0.7, alpha: 0.5)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func onSubmit(sender: AnyObject) {
-        let scaledImage = self.resize(self.draftImage, newSize: CGSizeMake(750, 750))
+        let scaledImage = self.resize(self.previewImage, newSize: CGSizeMake(750, 750))
         let imageData = UIImageJPEGRepresentation(scaledImage, 0)
         let imageFile = PFFile(name:"image.jpg", data:imageData!)
         
@@ -63,6 +38,56 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.tabBarController!.selectedIndex = 0;
             }
         }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            
+            self.previewImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            // Update UI to reflect selected image
+            self.captureImage.image = self.previewImage
+            self.captureImage.alpha = 1
+            self.captureImage.backgroundColor = UIColor.whiteColor()
+            self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func takeImageTapped(sender: AnyObject) {
+        let isCameraAvailable = UIImagePickerController.isSourceTypeAvailable(.Camera)
+        
+        // Limit to PhotoLibrary if no camera available
+        let sourceType = isCameraAvailable ? UIImagePickerControllerSourceType.Camera : UIImagePickerControllerSourceType.PhotoLibrary
+        
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.sourceType = sourceType
+        
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.captureImage.image = nil
+        self.captureDescription.text = ""
+        self.captureImage.backgroundColor = UIColor(white: 0.7, alpha: 0.5)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func resize(image: UIImage, newSize: CGSize) -> UIImage {
+        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        resizeImageView.image = image
+        
+        UIGraphicsBeginImageContext(resizeImageView.frame.size)
+        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
 
     /*

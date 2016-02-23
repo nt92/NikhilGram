@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }))
             
             // Set up listener for user logout
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "didLogout", name: userDidLogoutNotification, object: nil)
             
             // Check if user is already signed in
             if let currentUser = PFUser.currentUser() {
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func didLogout(){
-        let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("initialView") as UIViewController
         window?.rootViewController = vc
     }
 

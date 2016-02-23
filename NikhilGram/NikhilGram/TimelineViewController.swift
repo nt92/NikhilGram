@@ -20,7 +20,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource {
             return 0
         }
         else{
-            return  self.posts.count
+            return self.posts.count
         }
     }
     
@@ -39,10 +39,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.getInstagramPostsFromParse()
-    }
-    
-    func getInstagramPostsFromParse() {
         print("Retrieving Instagram Posts from Parse...")
         
         let query = PFQuery(className: "Post")
@@ -67,16 +63,4 @@ class TimelineViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
