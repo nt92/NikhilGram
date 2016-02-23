@@ -9,22 +9,55 @@
 import UIKit
 import Parse
 
+let userDidLogoutNotification = "userDidLogoutNotification"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
     var window: UIWindow?
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    func application(
+        application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+            
+            // Initialize Parse hosted by Facebook
+            // Parse.setApplicationId("hkzmKm9zeeJd6DJO9jhHytqEIgIA8fhxGV9tuWmH",
+            //            clientKey: "9FuoFpw2JSSBp7BAOQFoqqyPc9zAh5G1Z2sRmrKc")
+            
+            // Initialize Open Source Parse on Heroku
+            Parse.initializeWithConfiguration(
+                ParseClientConfiguration(block:
+                    { (configuration:ParseMutableClientConfiguration) -> Void in
+                        
+                        configuration.applicationId = "myAppId"
+                        configuration.clientKey = "myMasterKey"
+                        configuration.server = "https://parse-instagram.herokuapp.com/parse"
+                }))
+            
+            // Set up listener for user logout
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
+            
+            // Check if user is already signed in
+            if let currentUser = PFUser.currentUser() {
+                print("Logged in user detected: \(currentUser.username!)")
+                
+                let vc = storyboard.instantiateViewControllerWithIdentifier("tabBarController") as UIViewController
+                window?.rootViewController = vc
+                
+            } else {
+                // Let storyboard dictate initial view controller
+                print("No logged in user detected")
+            }
+            
+            return true
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        Parse.initializeWithConfiguration(
-            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "INSTAGRAM_NIKHIL"
-                configuration.clientKey = "codepath"
-                configuration.server = "https://instagram-nikhil.herokuapp.com/parse"
-            })
-        )
-        return true
+    }
+    
+    func didLogout(){
+        let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        window?.rootViewController = vc
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -13,6 +13,10 @@
 		A15651601C73F744008317ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A156515F1C73F744008317ED /* Assets.xcassets */; };
 		A15651631C73F744008317ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15651611C73F744008317ED /* LaunchScreen.storyboard */; };
 		A156516B1C7402E5008317ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156516A1C7402E5008317ED /* LoginViewController.swift */; };
+		A18DB9AD1C7C3903009372EF /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9AC1C7C3903009372EF /* TimelineViewController.swift */; };
+		A18DB9AF1C7C390C009372EF /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9AE1C7C390C009372EF /* CaptureViewController.swift */; };
+		A18DB9B11C7C3915009372EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9B01C7C3915009372EF /* ProfileViewController.swift */; };
+		A18DB9B31C7C3926009372EF /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9B21C7C3926009372EF /* TimelineCell.swift */; };
 		B90BA6C31EF4CF1AE227A7AE /* Pods_NikhilGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E59253F717C5E2990DEFE /* Pods_NikhilGram.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,10 +27,14 @@
 		A15651581C73F744008317ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A156515A1C73F744008317ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A156515D1C73F744008317ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A156515F1C73F744008317ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A156515F1C73F744008317ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = NikhilGram/Assets.xcassets; sourceTree = "<group>"; };
 		A15651621C73F744008317ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A15651641C73F744008317ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156516A1C7402E5008317ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A18DB9AC1C7C3903009372EF /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		A18DB9AE1C7C390C009372EF /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		A18DB9B01C7C3915009372EF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A18DB9B21C7C3926009372EF /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		F8F4FB978B3ADEFC61636BA5 /* Pods-NikhilGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikhilGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NikhilGram/Pods-NikhilGram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,20 +80,40 @@
 		A15651571C73F744008317ED /* NikhilGram */ = {
 			isa = PBXGroup;
 			children = (
+				A18DB9AB1C7C38EF009372EF /* Views */,
+				A18DB9A91C7C38D1009372EF /* View Controllers */,
 				A15651581C73F744008317ED /* AppDelegate.swift */,
 				A156515A1C73F744008317ED /* ViewController.swift */,
 				A156515C1C73F744008317ED /* Main.storyboard */,
-				A156516A1C7402E5008317ED /* LoginViewController.swift */,
-				A156515F1C73F744008317ED /* Assets.xcassets */,
 				A15651611C73F744008317ED /* LaunchScreen.storyboard */,
 				A15651641C73F744008317ED /* Info.plist */,
 			);
 			path = NikhilGram;
 			sourceTree = "<group>";
 		};
+		A18DB9A91C7C38D1009372EF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A156516A1C7402E5008317ED /* LoginViewController.swift */,
+				A18DB9AC1C7C3903009372EF /* TimelineViewController.swift */,
+				A18DB9B01C7C3915009372EF /* ProfileViewController.swift */,
+				A18DB9AE1C7C390C009372EF /* CaptureViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A18DB9AB1C7C38EF009372EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A18DB9B21C7C3926009372EF /* TimelineCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		FBA702A37A0263E70240A8C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A156515F1C73F744008317ED /* Assets.xcassets */,
 				808E59253F717C5E2990DEFE /* Pods_NikhilGram.framework */,
 			);
 			name = Frameworks;
@@ -214,9 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18DB9B11C7C3915009372EF /* ProfileViewController.swift in Sources */,
+				A18DB9B31C7C3926009372EF /* TimelineCell.swift in Sources */,
 				A156516B1C7402E5008317ED /* LoginViewController.swift in Sources */,
+				A18DB9AD1C7C3903009372EF /* TimelineViewController.swift in Sources */,
 				A156515B1C73F744008317ED /* ViewController.swift in Sources */,
 				A15651591C73F744008317ED /* AppDelegate.swift in Sources */,
+				A18DB9AF1C7C390C009372EF /* CaptureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
