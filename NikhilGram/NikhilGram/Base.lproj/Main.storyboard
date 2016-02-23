@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="56" y="314"/>
         </scene>
-        <!--Capture-->
+        <!--Capture View Controller-->
         <scene sceneID="Zft-y1-kPO">
             <objects>
                 <viewController id="Apo-Fz-8oq" customClass="CaptureViewController" customModule="NikhilGram" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,13 +65,41 @@
                     <view key="view" contentMode="scaleToFill" id="bDy-NW-cc9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to take or select a photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o32-lI-gYL">
+                                <rect key="frame" x="51" y="130" width="218" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-zS-rX7">
+                                <rect key="frame" x="20" y="28" width="280" height="229"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add a description..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WI7-4q-9rV">
+                                <rect key="frame" x="20" y="274" width="280" height="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqo-CU-X2P">
+                                <rect key="frame" x="136" y="410" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="Apo-Fz-8oq" eventType="touchUpInside" id="JHj-dP-Kzv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Capture" id="1aM-Um-CWP"/>
+                    <navigationItem key="navigationItem" id="OuZ-Qe-ZkM"/>
+                    <connections>
+                        <outlet property="captureDescription" destination="WI7-4q-9rV" id="bxn-cY-Fna"/>
+                        <outlet property="captureImage" destination="ZvV-zS-rX7" id="fpD-XG-IAr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nme-eh-hZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="387"/>
+            <point key="canvasLocation" x="1335" y="387"/>
         </scene>
         <!--Profile-->
         <scene sceneID="yQf-Yv-KQi">
@@ -166,13 +194,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="evU-IU-3s5" kind="relationship" relationship="viewControllers" id="MwR-PN-qsV"/>
-                        <segue destination="Apo-Fz-8oq" kind="relationship" relationship="viewControllers" id="1tn-BW-4hj"/>
+                        <segue destination="O6m-mO-Bzg" kind="relationship" relationship="viewControllers" id="1tn-BW-4hj"/>
                         <segue destination="28k-xP-pd8" kind="relationship" relationship="viewControllers" id="rkh-z1-rI9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7c-o3-MbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="423" y="314"/>
+        </scene>
+        <!--Capture-->
+        <scene sceneID="AhQ-cz-jR0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O6m-mO-Bzg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Capture" id="1aM-Um-CWP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mX2-gq-hiC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Apo-Fz-8oq" kind="relationship" relationship="rootViewController" id="5PQ-hk-hPT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVS-Rb-rkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="387"/>
         </scene>
     </scenes>
 </document>

@@ -21,8 +21,8 @@ class TimelineCell: UITableViewCell {
         didSet {
             self.postDescription.text = Post["caption"] as? String
             let photo = Post["photo"] as! PFObject
-            //self.postImage.file = photo["image"] as? PFFile
-            //self.postImage.loadInBackground()
+            self.pfPostImage.file = photo["image"] as? PFFile
+            self.pfPostImage.loadInBackground()
         }
     }
     

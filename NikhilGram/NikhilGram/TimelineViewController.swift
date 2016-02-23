@@ -37,6 +37,31 @@ class TimelineViewController: UIViewController, UITableViewDataSource {
         self.tableView.estimatedRowHeight = 350
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.getInstagramPostsFromParse()
+    }
+    
+    func getInstagramPostsFromParse() {
+        print("Retrieving Instagram Posts from Parse...")
+        
+        let query = PFQuery(className: "Post")
+        query.orderByDescending("createdAt")
+        query.includeKey("photo")
+        query.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) -> Void in
+            if let error = error {
+                print("Error: \(error)")
+            } else {
+                if let results = results {
+                    print("Successfully retrieved \(results.count) posts")
+                    self.posts = results
+                    self.tableView.reloadData()
+                } else {
+                    print("No results returned")
+                }
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
